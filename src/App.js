@@ -1,24 +1,32 @@
-function App() {
+import ColorSquare from './ColorSquare';
+import { useState } from 'react';
+
+function App({ colorName }) {
+
+  const [color, setColor] = useState(colorName);
+
   return (
     <div className='App'>
-      <main>
-        <div className='color_square'>
-          <p>Empty Value</p>
-        </div>
-        <label
-          htmlFor='color_input'
-          type='text'
-        >
-          Color Input
-        </label>
-        <input
-          id='color_input'
-          className='color_input'
-          type='text'
-          placeholder='Add color name'
-        />
-      </main>
-    </div>
+    <main>
+      <ColorSquare
+        color={color}
+      />
+      <label
+        htmlFor='color_input'
+        type='text'
+      >
+        Color Input
+      </label>
+      <input
+        id='color_input'
+        className='color_input'
+        type='text'
+        placeholder='Add color name'
+        value={color}
+        onChange={(e) => {setColor(e.target.value)}}
+      />
+    </main>
+  </div>
   );
 }
 

@@ -14,7 +14,7 @@ body {
 }
 
 html {
-  font-size: 22px;
+  font-size: 30px;
 }
 
 code {
@@ -47,8 +47,9 @@ main {
 .color_square {
   display: flex;
   min-height: 400px;
-  width: 100%;
-  border: 0.15rem solid black;
+  width: calc(100% - 1px);
+  border: 2px solid black;
+  box-shadow: 1px 1px #888888;
   border-radius: 0.25rem;
   align-items: center;
   justify-content: center;
@@ -69,11 +70,13 @@ label {
 
 input[type='text'] {
   flex-grow: 1;
-  width: 100%;
-  min-height: 48px;
-  max-height: 48px;
+  width: calc(100% - 1px);
+  min-height: 54px;
+  max-height: 54px;
   font-size: 1rem;
+  border: 2px solid black;
+  box-shadow: 1px 1px #888888;
   border-radius: 0.25rem;
   outline: none;
-  padding-left: 0.5rem;
+  padding-left: 0.25rem;
 }

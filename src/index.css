@@ -27,22 +27,21 @@ html {
 }
 
 .ColorSquare {
-  display: flex;
+  display: grid;
   min-height: 400px;
   width: 400px;
   border: 2px solid black;
   box-shadow: 2px 2px 5px black;
   border-radius: 0.25rem;
-  align-items: center;
-  justify-content: center;
+  place-content: center;
 }
 
 .ColorSquare p {
-  margin-top: auto;
-  margin-bottom: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+}
+
+form {
+  width: 400px;
 }
 
 label {
@@ -50,21 +49,22 @@ label {
   left: -99999px;
 }
 
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
 form input[type="text"] {
-  display: flex;
-  flex-grow: 1;
-  width: calc(100% - 1px);
+  width: 100%;
   font-size: 1rem;
   border: 2px solid black;
   box-shadow: 2px 2px 5px black;
   border-radius: 0.25rem;
   outline: none;
+  padding: 0.25rem;
+}
+
+button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 5px black;
   padding: 0.25rem;
 }

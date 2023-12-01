@@ -4,7 +4,7 @@ const ColorSquare = ({ color }) => {
 
     return (
         <div 
-            className='color_square'
+            className='ColorSquare'
             style={{ backgroundColor: color }}
         >
             <p>{color.length ? color : "Empty Value" }</p>
